@@ -35,7 +35,6 @@ export async function getStaticProps() {
   const db = await client.db();
   const meetupCollection = db.collection("meetups");
   const meetups = await meetupCollection.find().toArray();
-  console.log(meetups);
 
   client.close();
 
@@ -48,7 +47,7 @@ export async function getStaticProps() {
         id: meetup._id.toString(),
       })),
     },
-    revalidate: 5,
+    revalidate: 1,
   };
 }
 
