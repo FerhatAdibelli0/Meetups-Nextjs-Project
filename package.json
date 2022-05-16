@@ -12,5 +12,18 @@
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FerhatAdibelli0/Nextjs-project.git"
+  },
+  "author": "Ferhat Adibelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FerhatAdibelli0/Nextjs-project/issues"
+  },
+  "homepage": "https://github.com/FerhatAdibelli0/Nextjs-project#readme",
+  "description": ""
 }
