@@ -1,11 +1,11 @@
 import MeetupDetailPage from "../../components/meetups/MeetupDetail";
 import { MongoClient, ObjectId } from "mongodb";
-import { Fragment } from "react";
+import React from "react";
 import Head from "next/head";
 
 function MeetupDetail(props) {
   return (
-    <Fragment>
+    <React.Fragment>
       <Head>
         <title>{props.meetupsData.title}</title>
         <meta name="description" content={props.meetupsData.description} />
@@ -17,7 +17,7 @@ function MeetupDetail(props) {
         address={props.meetupsData.address}
         description={props.meetupsData.description}
       />
-    </Fragment>
+    </React.Fragment>
   );
 }
 
