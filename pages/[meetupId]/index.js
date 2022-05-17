@@ -26,7 +26,7 @@ export async function getStaticPaths() {
     "mongodb+srv://maxpayne35:qGBr7naSXYmEYnw@cluster0.sp51h.mongodb.net/meetups?retryWrites=true&w=majority"
   );
 
-  const db = await client.db();
+  const db = client.db();
   const meetups = await db.collection("meetups").find({}, { _id: 1 }).toArray();
 
   return {
@@ -46,11 +46,13 @@ export async function getStaticProps(context) {
     "mongodb+srv://maxpayne35:qGBr7naSXYmEYnw@cluster0.sp51h.mongodb.net/meetups?retryWrites=true&w=majority"
   );
 
-  const db = await client.db();
+  const db = client.db();
   const meetupCollection = db.collection("meetups");
   const selectedMettup = await meetupCollection.findOne({
     _id: ObjectId(meetupId),
   });
+
+  client.close();
 
   return {
     props: {
