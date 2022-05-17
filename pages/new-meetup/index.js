@@ -1,4 +1,4 @@
-import { Fragment } from "react/cjs/react.production.min";
+import { Fragment } from "react";
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 import { useRouter } from "next/router";
 import Head from "next/head";
